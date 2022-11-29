@@ -10,12 +10,12 @@ Unfortunately heroku doesn't provide any free service now. We can deploy via loc
 
 ## Demo:
 
-![IBM Quantum Coin Flipper App Demo](resources/Face1.PNG)
-![IBM Quantum Coin Flipper App Demo](resources/Face2.PNG)
+![IBM Quantum Coin Flipper App Demo](qcf-backend/resources/Face1.PNG)
+![IBM Quantum Coin Flipper App Demo](qcf-backend/resources/Face2.PNG)
 
 ## Video Demo:
 
-![IBM Quantum Coin Flipper App Demo](resources/IBMQuantumCoinFlipper.mp4)
+![IBM Quantum Coin Flipper App Demo](qcf-backend/resources/IBMQuantumCoinFlipper.mp4)
 
 ## Requirements:
 
