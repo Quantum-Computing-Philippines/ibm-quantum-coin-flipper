@@ -31,7 +31,7 @@ def results(request):
         circuit.h(q) 
         circuit.measure(q, c) 
 
-        job = execute(circuit, backend, shots=1)
+        job = execute(circuit, backend, shots=1024)
         job_monitor(job)
         counts = job.result().get_counts()
 
@@ -40,6 +40,7 @@ def results(request):
         job_id = job.job_id()
         result = int(counts.most_frequent(), 2)
         
+
         if result == 0:
             response = JsonResponse({'result':'tails', 'value': result, 'job_id': job_id})
         if result == 1:
@@ -65,14 +66,17 @@ def results(request):
         circuit.h(q) 
         circuit.measure(q, c) 
 
-        job = execute(circuit, backend, shots=1)
+        job = execute(circuit, backend, shots=1024)
         job_monitor(job)
         counts = job.result().get_counts()
 
         print('RESULT: ', counts, '\n')
 
         job_id = job.job_id()
+
+        # transform to get the most frequent count of either 0 or 1
         result = int(counts.most_frequent(), 2)
+
         if result == 0:
             response = JsonResponse({'result':'tails', 'value': result, 'job_id': job_id})
         if result == 1:
