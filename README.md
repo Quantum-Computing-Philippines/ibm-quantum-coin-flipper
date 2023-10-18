@@ -22,8 +22,8 @@ Unfortunately heroku doesn't provide any free service now. We can deploy via loc
 - Install django via pip
 
 ```
-pip install django==3.1.5
-pip install qiskit
+pip install django==3.1.5 --user
+pip install qiskit --user
 ```
 
 - I use python version 3.8
